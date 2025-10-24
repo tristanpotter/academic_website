@@ -323,11 +323,42 @@
             margin-bottom: 0.1rem;
         }
 
+        /* Hover-to-abstract for WIP titles */
+        .wp-title {
+            cursor: pointer;
+            transition: color 0.2s ease;
+            display: inline-block;
+            width: fit-content;
+        }
+        .wp-title:hover { color: #0066cc; }
+
+        /* Expand paired abstract on hover (same behavior as publications) */
+        .wp-title:hover ~ .pub-expanded,
+        .working-paper .pub-expanded:hover {
+            max-height: 400px;
+            padding: 20px 0 10px 0;
+        }
+
         .wp-status {
             color: #666;
             font-size: 0.95rem;
             font-style: italic;
         }
+
+        .wp-status a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .wp-status a:hover {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .wp-title:hover {
+            color: #0066cc;
+        }
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -386,11 +417,11 @@
         <!-- First Section: Introduction with Photo -->
         <div class="intro-section">
             <div class="intro-text">
-                <p>I am an Associate Professor in the School of Economics at Drexel University and currently a visiting scholar at the Vermont Center for Behavioral Science Research on Climate and the Environment at Middlebury College.</p>
+                <p>I am an Associate Professor in the School of Economics at Drexel University and was recently a visiting scholar at the Vermont Center for Behavioral Science Research on Climate and the Environment at Middlebury College.</p>
                 
                 <p><strong>Fields:</strong>  Macro/Labor, Environmental</p>
                 
-                <p><strong>Research Interests:</strong> My research spans macroeconomics, labor, and environmental economics. A frequent theme in this work is the role of technology in reshaping behavior, labor market outcomes, and the physical environment. While these domains form the core of my research agenda, my interests are broad: I have also worked on trade policy, the intergenerational transmission of wealth, and racialized patterns in media coverage. Methodologically, my research is both empirical and theoretical.</p>
+                <p><strong>Research Interests:</strong> I study how beliefs, technology, and institutions interact to shape labor and the environment. My work in macro-labor examines how habits, expectations, beliefs, and learning influence unemployment dynamics at both the micro and macro levels. My more recent environmental research focuses on the determinants of beliefs about environmental issues and the role of technology in reshaping the natural world. I have also worked on trade policy, the intergenerational transmission of wealth, and inequality in media coverage.</p>
             </div>
             <div class="photo-section">
                 <div class="intro-photo"></div>
@@ -415,7 +446,7 @@
             <div class="working-papers-list">
                 
                 <div class="working-paper" data-categories="environmental">
-                    <a href="https://www.dropbox.com/scl/fi/fkezr0dryu2ifgotz0xzj/airpollution_v5.pdf?rlkey=0su9qhdnnzgw2dkhb6m2u3isl&dl=0" class="pub-title" target="blank">Air Pollution and Demand for Climate Spending</a>
+                    <a href="https://www.dropbox.com/scl/fi/jpicdv2u7zdvcsxnwxb4w/airpollution_vfinal.pdf?rlkey=rek3t0w5cd2fqbnqkqwuchtyo&dl=0" class="pub-title" target="blank">Air Pollution and Demand for Climate Spending</a>
                     <div class="pub-expanded">
                         <div class="pub-content">
                             <div class="pub-abstract">
@@ -428,29 +459,43 @@
                 </div>
                 
                 <div class="working-paper" data-categories="macrolabor,environmental,tech">
-                    <div class="wp-title">Agricultural Technology and Deforestation in Pre-Industrial Economies</div>
-                    <div class="wp-status">[Draft available upon request.]</div>
-                </div>
-
-                <div class="working-paper" data-categories="other">
-                    <div class="wp-title">Demographic Correlates of Humanizing Media Coverage of Homicide: Evidence from the Boston Globe, 1976-84 (w/ Emily Ocasio)</div>
-                    <div class="wp-status">[Substantial revision in progress. Original draft available upon request.]</div>
+                    <a href="Link here" class="pub-title" target="blank">Agricultural Technology and Deforestation in Pre-Industrial Economies</a>
+                    <div class="pub-expanded">
+                        <div class="pub-content">
+                            <div class="pub-abstract">
+                                <h4>Abstract</h4>
+                                <p>
+                                    Global forest cover was in steady decline for millennia prior modern industrialization. This paper studies how technological progress in agriculture shaped long-run forest cover in pre-industrial societies. I begin by developing an equilibrium bio-economic model to analyze how agricultural productivity influenced land allocation decisions and forest cover in the presence of limited trade and Malthusian population dynamics. I show that while early agricultural innovations may have spared forests, beyond a threshold further advances necessarily expand cultivation and accelerate deforestation. I test these predictions using high-resolution Holocene forest reconstructions from fossil pollen data. Exploiting variation in the timing of the First Agricultural Revolution, I find that early adoption led to a sustained 25% per-millennium decline in forest cover relative to later adopters. In a complementary case study focusing on the introduction of the three-field rotation system in medieval Europe, I show that the system caused an immediate 20% reduction in forest cover followed by a long-run decline of 50%. Together, these results indicate that agricultural innovation was an important driver of global deforestation in the pre-industrial era.
+</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
+                
                 <div class="working-paper" data-categories="environmental,macrolabor">
-                    <div class="wp-title">Sewing the Seeds of Environmentalism: How the Civilian Conservation Corps Shaped Environmental Careers Across Generations</div>
+                    <div class="wp-title">Sowing the Seeds of Environmentalism: How the Civilian Conservation Corps Shaped Environmental Careers Across Generations</div>
                     <div class="wp-status">[Work in progress]</div>
                 </div>
                 
                 <div class="working-paper" data-categories="environmental,tech,other">
-                    <div class="wp-title">Soil, Bright-Leaf Tobacco and the Intergenerational Transmission of Wealth (w/ Bryce Stucki)</div>
+                    <div class="wp-title">Soil, Bright-Leaf Tobacco and the Intergenerational Transmission of Wealth in Antebellum North Carolina and Virginia (w/ Bryce Stucki)</div>
                     <div class="wp-status">[Work in progress]</div>
                 </div>
 
                 <div class="working-paper" data-categories="macrolabor">
-                    <div class="wp-title">The Incidence of Non-Compete Agreements in Low-Wage Labor Markets (w/ Bart Hobjin and Andre Kurmann)</div>
+                    <div class="wp-title">Non-Competes and Wages: Evidence from the NLSY97 (w/ Bart Hobjin and Andre Kurmann)</div>
                     <div class="wp-status">[Work in Progress]</div>
                 </div>
+
+                <div class="working-paper" data-categories="macrolabor">
+                    <div class="wp-title">Pessimism and the Incidence of Non-Competes in Low-Wage Labor Markets (w/ Bart Hobjin and Andre Kurmann)</div>
+                    <div class="wp-status">[Work in Progress]</div>
+                </div>
+
+                <div class="working-paper" data-categories="other">
+                    <div class="wp-title">Demographic Correlates of Humanizing Media Coverage of Homicide: Evidence from Three National Newspapers (w/ Emily Ocasio)</div>
+                    <div class="wp-status">[Substantial revision in progress. Previous draft <a href="https://www.dropbox.com/scl/fi/aiqmyog31ynyye8qj713e/Manuscript.pdf?rlkey=fj17914g5g2x661r6gdcuvcna&dl=0" target="_blank" rel="noopener">available here</a>.]</div>                </div>
                 <!--
                 <div class="working-paper" data-categories="tech,other">
                     <div class="wp-title">Smartphones and Fertility: Evidence and Theory</div>
@@ -575,44 +620,47 @@
             </div>
         </div>
         <script>
+            function updateSectionVisibility() {
+              const pubs = Array.from(document.querySelectorAll('.publication'))
+                .filter(el => el.style.display !== 'none');
+              const wps = Array.from(document.querySelectorAll('.working-paper'))
+                .filter(el => el.style.display !== 'none');
+            
+              const pubSection = document.querySelector('.publications-list')?.closest('.section');
+              const wpSection  = document.querySelector('.working-papers-list')?.closest('.section');
+            
+              if (pubSection) pubSection.style.display = pubs.length ? '' : 'none';
+              if (wpSection)  wpSection.style.display  = wps.length  ? '' : 'none';
+            }
+            
             document.addEventListener('DOMContentLoaded', function() {
-                const navButtons = document.querySelectorAll('.nav-button');
-                const publications = document.querySelectorAll('.publication');
-                const workingPapers = document.querySelectorAll('.working-paper');
-                const allPapers = [...publications, ...workingPapers];  // Combine both lists
-                
-                console.log('Found', navButtons.length, 'nav buttons');
-                console.log('Found', publications.length, 'publications');
-                console.log('Found', workingPapers.length, 'working papers');
-                
-                navButtons.forEach(button => {
-                    button.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        
-                        // Remove active class from all buttons
-                        navButtons.forEach(btn => btn.classList.remove('active'));
-                        this.classList.add('active');
-                        
-                        // Get the filter
-                        const filter = this.getAttribute('data-filter');
-                        console.log('Filtering by:', filter);
-                        
-                        // Show/hide all papers (both publications and working papers)
-                        allPapers.forEach(paper => {
-                            const categories = paper.getAttribute('data-categories') || '';
-                            
-                            if (filter === 'all') {
-                                paper.style.display = 'block';
-                            } else if (categories.includes(filter)) {
-                                paper.style.display = 'block';
-                            } else {
-                                paper.style.display = 'none';
-                            }
-                        });
-                    });
+              const navButtons = document.querySelectorAll('.nav-button');
+              const publications = document.querySelectorAll('.publication');
+              const workingPapers = document.querySelectorAll('.working-paper');
+              const allPapers = [...publications, ...workingPapers];
+            
+              navButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  navButtons.forEach(btn => btn.classList.remove('active'));
+                  this.classList.add('active');
+            
+                  const filter = this.getAttribute('data-filter');
+            
+                  allPapers.forEach(paper => {
+                    const categories = paper.getAttribute('data-categories') || '';
+                    paper.style.display =
+                      (filter === 'all' || categories.includes(filter)) ? 'block' : 'none';
+                  });
+            
+                  updateSectionVisibility();
                 });
+              });
+            
+              updateSectionVisibility(); // initial check on page load
             });
             </script>
+            
 
 </body>
 </html>
